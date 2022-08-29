@@ -1,0 +1,13 @@
+data/
+log/
+.vscode/
+__pycache__/
+.idea/
+figs/
+checkpoints/
+.ipynb_checkpoints/
+*.ipynb/
+*.pt
+*.pth
+tensordiffeq/
+venv/
