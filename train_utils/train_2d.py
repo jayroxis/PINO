@@ -128,10 +128,14 @@ def train_2d_burger(model,
                          config=config,
                          tags=tags, reinit=True,
                          settings=wandb.Settings(start_method="fork"))
-
-    data_weight = config['train']['xy_loss']
-    f_weight = config['train']['f_loss']
-    ic_weight = config['train']['ic_loss']
+    train_config = config['train']
+    data_weight = train_config['xy_loss']
+    f_weight = train_config['f_loss']
+    ic_weight = train_config['ic_loss']
+    if 'log_step' in train_config:
+        log_step = train_config['log_step']
+    else:
+        log_step = 100
     model.train()
     myloss = LpLoss(size_average=True)
     pbar = range(config['train']['epochs'])
@@ -180,7 +184,7 @@ def train_2d_burger(model,
                 }
             )
 
-        if e % 100 == 0:
+        if e % log_step == 0:
             save_checkpoint(config['train']['save_dir'],
                             config['train']['save_name'].replace('.pt', f'_{e}.pt'),
                             model, optimizer)

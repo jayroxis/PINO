@@ -3,7 +3,7 @@ data:
   datapath: 'data/burgers_pino.mat'
   total_num: 1000
   offset: 0
-  n_sample: 800
+  n_sample: 50
   nx: 128
   nt: 100
   sub: 1
@@ -18,14 +18,15 @@ model:
 
 train:
   batchsize: 20
-  epochs: 500
-  milestones: [150, 300, 450]
+  epochs: 5000
+  log_step: 5000
+  milestones: [1200, 2400, 3600]
   base_lr: 0.001
   scheduler_gamma: 0.5
   ic_loss: 10.0
   f_loss: 1.0
   xy_loss: 0.0
-  save_dir: 'burgers-FDM'
+  save_dir: 'burgers-FDM-Sample-50'
   save_name: 'burgers-pretrain-eqn.pt'
 
 log:
