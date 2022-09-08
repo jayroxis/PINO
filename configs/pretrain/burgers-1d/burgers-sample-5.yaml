@@ -3,7 +3,7 @@ data:
   datapath: 'data/burgers_pino.mat'
   total_num: 1000
   offset: 0
-  n_sample: 50
+  n_sample: 5
   nx: 128
   nt: 100
   sub: 1
@@ -26,7 +26,7 @@ train:
   ic_loss: 10.0
   f_loss: 1.0
   xy_loss: 0.0
-  save_dir: 'burgers-FDM-Sample-50'
+  save_dir: 'burgers-FDM-Sample-5'
   save_name: 'pino-run-5.pt'
 
 log:

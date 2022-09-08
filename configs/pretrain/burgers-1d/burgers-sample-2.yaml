@@ -3,7 +3,7 @@ data:
   datapath: 'data/burgers_pino.mat'
   total_num: 1000
   offset: 0
-  n_sample: 50
+  n_sample: 2
   nx: 128
   nt: 100
   sub: 1
@@ -17,16 +17,16 @@ model:
   activation: gelu
 
 train:
-  batchsize: 20
-  epochs: 5000
-  log_step: 5000
-  milestones: [1200, 2400, 3600]
+  batchsize: 2
+  epochs: 1000
+  log_step: 1000
+  milestones: [300, 600, 900]
   base_lr: 0.001
   scheduler_gamma: 0.5
   ic_loss: 10.0
   f_loss: 1.0
   xy_loss: 0.0
-  save_dir: 'burgers-FDM-Sample-50'
+  save_dir: 'burgers-FDM-Sample-2'
   save_name: 'pino-run-5.pt'
 
 log:

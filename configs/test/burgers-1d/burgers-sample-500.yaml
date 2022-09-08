@@ -18,7 +18,7 @@ model:
 
 test:
   batchsize: 1
-  ckpt: 'checkpoints/burgers-FDM-Sample-500/burgers-pretrain-eqn.pt'
+  ckpt: 'checkpoints/burgers-FDM-Sample-500/pino-run-5.pt'
 
 log:
   project: 'PINO-burgers-test'

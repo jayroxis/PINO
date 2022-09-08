@@ -27,7 +27,7 @@ train:
   f_loss: 1.0
   xy_loss: 0.0
   save_dir: 'burgers-FDM-Sample-20'
-  save_name: 'burgers-pretrain-eqn.pt'
+  save_name: 'pino-run-5.pt'
 
 log:
   project: 'PINO-burgers-pretrain'
